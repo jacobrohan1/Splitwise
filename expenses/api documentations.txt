@@ -1,0 +1,16 @@
+API ENDPOINTS 
+
+http://localhost:8000/api/users/ - POST - TO add users 
+http://localhost:8000/api/users/- GET - To see all users
+
+http://localhost:8000/api/split-expense/ -  POST - FORMAT - {
+                                                                "payer": "u1",  // The user_id of the payer
+                                                                "description": "Electricity Bill",
+                                                                "amount": 1000.00,  // The total amount of the expense
+                                                                "expense_type": "EQUAL",  // Expense type (EQUAL, EXACT, or PERCENT)
+                                                                "participants": ["u1", "u2", "u3", "u4"],  // List of user_ids of participants
+                                                                "shares": [250.00, 250.00, 250.00, 250.00]  // List of shares corresponding to participants
+                                                                }
+
+http://localhost:8000/api/show-balances/ - GET - To check the balance of all users
+http://localhost:8000/api/users/<str: user_id> /expenses/ - GET - To check balance of a specific user
